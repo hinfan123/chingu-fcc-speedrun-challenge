@@ -62,7 +62,7 @@ Copy this table as needed to make a separate table for each team member for reco
 | Complete | Blog Post |Project  |
 |----------|---------|----------|
 |      | N/A| [Comprehensive Portfolio as a Single Page App](./portfolio) |   |
-|      |  [ ]()  | [Build a Tribute Page](./frontend/tribute-page) |  |
+| 09.03.2017     |  [ ]()  | [Build a Tribute Page](./frontend/tribute-page) |  |
 |      |  [ ]()  | [Build a Personal Portfolio Webpage](./frontend/portfolio) |  |
 |      |  [ ]()  | [Build a Random Quote Machine](./frontend/random-quote-machine) |  |
 |      |  [ ]()  | [Show the Local Weather](./frontend/local-weather) |  |
