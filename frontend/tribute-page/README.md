@@ -20,4 +20,8 @@ Steps:
 
 * Gather image and content. 
 
-* To view this project, clone/download it and open index.html. 
+## View Project
+
+* This project is live [here](http://typical-daughter.surge.sh/)
+
+* Alternatively, you can clone/download it and open index.html. 
