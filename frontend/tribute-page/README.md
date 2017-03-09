@@ -11,3 +11,13 @@ Build an app that is functionally similar to this: https://codepen.io/FreeCodeCa
 * User Story: I can click on a link that will take me to an external website with further information on the topic.
 
 ## Notes
+
+Steps:
+
+* Pick a topic/personality.
+
+* Select frontend framework. 
+
+* Gather image and content. 
+
+* To view this project, clone/download it and open index.html. 
