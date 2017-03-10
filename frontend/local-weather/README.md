@@ -11,3 +11,20 @@ Build an app that is functionally similar to this: http://codepen.io/FreeCodeCam
 * User Story: I can push a button to toggle between Fahrenheit and Celsius.
 
 ## Notes
+I have used: 
+
+* CSS Flexbox for layout.
+
+* jQuery for API calls. 
+
+* Fontawesome for icons. 
+
+* Openweather API
+
+## View Project
+
+* This project is live [here](http://typical-daughter.surge.sh/)
+
+* Alternatively, you can clone/download it and open index.html. 
+
+* Read a blog post about it [here](https://medium.com/@pankajashree/chingu-fcc-speedrun-challenge-day-1-tribute-page-7cc64841584f#.8jgq70pig)
