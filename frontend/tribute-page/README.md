@@ -25,3 +25,5 @@ Steps:
 * This project is live [here](http://typical-daughter.surge.sh/)
 
 * Alternatively, you can clone/download it and open index.html. 
+
+* Read a blog post about it [here](https://medium.com/@pankajashree/chingu-fcc-speedrun-challenge-day-1-tribute-page-7cc64841584f#.8jgq70pig)
