@@ -62,7 +62,7 @@ Copy this table as needed to make a separate table for each team member for reco
 | Complete | Blog Post |Project  |
 |----------|---------|----------|
 |      | N/A| [Comprehensive Portfolio as a Single Page App](./portfolio) |   |
-| 09.03.2017     |  [ ]()  | [Build a Tribute Page](./frontend/tribute-page) |  |
+| 09.03.2017     |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-challenge-day-1-tribute-page-7cc64841584f#.8jgq70pig)  | [Build a Tribute Page](./frontend/tribute-page) |  |
 |      |  [ ]()  | [Build a Personal Portfolio Webpage](./frontend/portfolio) |  |
 |      |  [ ]()  | [Build a Random Quote Machine](./frontend/random-quote-machine) |  |
 |      |  [ ]()  | [Show the Local Weather](./frontend/local-weather) |  |
