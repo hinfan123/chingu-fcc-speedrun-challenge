@@ -6,47 +6,56 @@ body {
 }
 
 body {
-  background-color: black;
   transition: all 2s;
-}
+  background-color: #642478;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23072916' fill-opacity='0.33'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
-.container-fluid{
+}
+@media all and (max-width: 700px) {
+  .container-fluid{
   margin-top:auto;
   margin-bottom:auto;
+  display:flex;
+  flex-flow: column;
 }
 
-.quote,
-.author {
+
+.quotes {
   color: white;
   font-family: 'Marck Script', cursive;
-  font-size: 1.5em;
- width: 43%;
+  
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  height: auto;
+  height: 50%;
   transition: all 2s;
+}
+
+.author{
+	text-align:right;
 }
 
 h1{
-  width: 37%;
+  width: 80%;
   margin-left:auto;
   margin-right:auto;
   padding:1%;
-  background-color: #FFA1FF;
-  color:black;
+  color: #FFA1FF;
+  background-color: black;
+  border: 2px solid #FFA1FF;
   font-family: 'Marck Script';
   margin-top: 5%;
-  font-size: 2.5em;
-  border-radius:5px;
+  
+  border-radius:25px;
 }
 h2 {
-  width: 40%;
+  width: 80%;
   margin-left:auto;
   margin-right:auto;
   padding-bottom:10px;
   color: #FFA1FF;
   font-family: 'Marck Script';
-  font-size: 2.5em;
+  
   border-bottom: 2px solid 
 }
 
@@ -59,6 +68,18 @@ button {
   font-family: 'Marck Script';
   font-size: 1.5em;
   border-radius: 10px;
+}
+
+#new{
+	position: fixed;
+	bottom: 10%;
+	left:10%;
+}
+
+#tweet{
+	position: fixed;
+	bottom: 10%;
+	right:10%;
 }
 
 button:hover {
@@ -80,4 +101,109 @@ footer {
     margin: auto;
     width: 400px;
 	  text-align: center;
+	  color: #FFA1FF;
 } 
+
+a{
+	text-decoration:none;
+}
+}
+
+@media all and (min-width: 700px) {
+.container-fluid{
+  margin-top:auto;
+  margin-bottom:auto;
+  display:flex;
+  flex-flow: column;
+}
+
+
+
+.author{
+	text-align:right;
+}
+
+.quotes {
+  color: white;
+  font-family: 'Marck Script', cursive;
+  font-size: 2em;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50%;
+  transition: all 2s;
+  
+}
+
+h1{
+  width: 50%;
+  margin-left:auto;
+  margin-right:auto;
+  padding:1%;
+  color: #FFA1FF;
+  background-color: black;
+  border: 2px solid #FFA1FF;
+  font-family: 'Marck Script';
+  margin-top: 5%;
+  font-size: 2.5em;
+  border-radius:25px;
+}
+h2 {
+  width: 50%;
+  margin-left:auto;
+  margin-right:auto;
+  padding-bottom:10px;
+  color: #FFA1FF;
+  font-family: 'Marck Script';
+  font-size: 2.5em;
+  border-bottom: 2px solid 
+}
+
+button {
+  color: #FFA1FF;
+  background-color: black;
+  border-color: #FFA1FF;
+  margin: 2%;
+  padding: 0.5%;
+  font-family: 'Marck Script';
+  font-size: 1.5em;
+  border-radius: 10px;
+}
+
+#new{
+	position: fixed;
+	bottom: 10%;
+	left:30%;
+}
+
+#tweet{
+	position: fixed;
+	bottom: 10%;
+	left:55%;
+}
+
+button:hover {
+  background-color: #FFBABA;
+  color: black;
+}
+ 
+.footholder {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    background: none repeat scroll 0 0 ;
+    height: 40px;
+    margin: auto;
+    width: 400px;
+	  text-align: center;
+	  color: #FFA1FF;
+} 
+a{
+	text-decoration:none;
+}
+}
