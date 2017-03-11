@@ -4,9 +4,15 @@ $(document).ready(function(){
   var key = "a9445f3cb154571ad56fc734ee9bc91c";
   var lat, lon, api, city, apidata;
   var cel = false;
+  
+  getLoc();
+  setInterval(getLoc, 1800000);
+  
+  function getLoc(){
   if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(weatherInfo);
-}
+  }
+  }
   
   function tempToggle(ftemp,c){
     if(c) return Math.round((ftemp-32) * (5/9)) +' C';
