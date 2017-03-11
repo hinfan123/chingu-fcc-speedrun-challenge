@@ -19,12 +19,12 @@ I have used:
 
 * Fontawesome for icons. 
 
-* Openweather API
+* [This API](www.apixu.com)
 
 ## View Project
 
-* This project is live [here](http://typical-daughter.surge.sh/)
+* This project is live [here](https://pankaja-shree.github.io/weather-app/)
 
 * Alternatively, you can clone/download it and open index.html. 
 
-* Read a blog post about it [here](https://medium.com/@pankajashree/chingu-fcc-speedrun-challenge-day-1-tribute-page-7cc64841584f#.8jgq70pig)
+* Read a blog post about it [here](https://medium.com/@pankajashree/chingu-fcc-speedrun-challenge-day-2-show-the-local-weather-e63fd34bbe6b#.tci30dykm)
