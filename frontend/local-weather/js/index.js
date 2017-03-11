@@ -40,7 +40,7 @@ $(document).ready(function(){
   function weatherInfo(pos){
     lat = pos.coords.latitude;
     lon = pos.coords.longitude;
-/*
+/* to work on http: 
       $.getJSON("http://ipinfo.io/json",function(data){
         
         var loc = data.loc;
@@ -52,10 +52,8 @@ $(document).ready(function(){
         console.log(api);
         */
    api = "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&units=imperial&APPID="+key;
-   console.log(api);
         $.getJSON(api,function(json){
                 apidata = json;
-                console.log(json);
                 renderData(json,cel);
                 
               $("#toggle").click(function(){
