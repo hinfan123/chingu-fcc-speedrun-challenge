@@ -65,7 +65,7 @@ Copy this table as needed to make a separate table for each team member for reco
 | 09.03.2017     |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-challenge-day-1-tribute-page-7cc64841584f#.8jgq70pig)  | [Build a Tribute Page](./frontend/tribute-page) |  |
 |      |  [ ]()  | [Build a Personal Portfolio Webpage](./frontend/portfolio) |  |
 |      |  [ ]()  | [Build a Random Quote Machine](./frontend/random-quote-machine) |  |
-|      |  [ ]()  | [Show the Local Weather](./frontend/local-weather) |  |
+|  10.03.2017    |  [Medium Post ](https://medium.com/@pankajashree/chingu-fcc-speedrun-challenge-day-2-show-the-local-weather-e63fd34bbe6b#.tci30dykm)  | [Show the Local Weather](./frontend/local-weather) |  |
 |      |  [ ]()  | [Build a Wikipedia Viewer](./frontend/wikipedia-viewer) |  |
 |      |  [ ]()  | [Use the Twitch.tv JSON API](./frontend/twitch-client) |  |
 |      |  [ ]()  | [Build a JavaScript Calculator](./frontend/calculator) |  |
