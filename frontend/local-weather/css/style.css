@@ -1,7 +1,6 @@
 body{
-font-family: 'Lato', sans-serif;
-  background: #596164;
-  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+	font-family: 'Lato', sans-serif;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   height: 100%;
     margin: 0;
     background-repeat: no-repeat;
