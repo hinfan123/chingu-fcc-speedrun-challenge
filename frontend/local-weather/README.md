@@ -19,7 +19,7 @@ I have used:
 
 * Fontawesome for icons. 
 
-* [This API](www.apixu.com)
+* [This API](https://www.apixu.com/)
 
 ## View Project
 
