@@ -14,9 +14,13 @@ Build an app that is functionally similar to this: https://codepen.io/FreeCodeCa
 
 I have used:
 
-* Bootstrap CSS Flexbox for layout.
+* Bootstrap and CSS Flexbox for layout.
 
 * Fontawesome for icons.
+
+* Background from [here](http://www.heropatterns.com/).
+
+* jQuery for Javascript code
 
 ## View Project
 
