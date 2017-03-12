@@ -12,3 +12,15 @@ Build an app that is functionally similar to this: https://codepen.io/FreeCodeCa
 * User Story: I can keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output.
 
 ## Notes
+
+I have used: 
+
+* Pure CSS and Javascript. No frameworks.
+
+## View Project
+
+* This project is live [here]()
+
+* Alternatively, you can clone/download it and open index.html. 
+
+* Read a blog post about it [here]()
