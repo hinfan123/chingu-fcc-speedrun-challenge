@@ -48,8 +48,11 @@ input:active{
     border: none;
 }
 
-input:hover{
-    border: none;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 .row:nth-child(2) input{
