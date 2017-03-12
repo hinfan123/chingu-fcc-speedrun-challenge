@@ -4,9 +4,15 @@ $(document).ready(function(){
   var key = "a9445f3cb154571ad56fc734ee9bc91c";
   var lat, lon, api, city, apidata;
   var cel = false;
+  
+  getLoc();
+  setInterval(getLoc, 1800000);
+  
+  function getLoc(){
   if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(weatherInfo);
-}
+  }
+  }
   
   function tempToggle(ftemp,c){
     if(c) return Math.round((ftemp-32) * (5/9)) +' C';
@@ -34,7 +40,7 @@ $(document).ready(function(){
   function weatherInfo(pos){
     lat = pos.coords.latitude;
     lon = pos.coords.longitude;
-/*
+/* to work on http: 
       $.getJSON("http://ipinfo.io/json",function(data){
         
         var loc = data.loc;
@@ -46,10 +52,8 @@ $(document).ready(function(){
         console.log(api);
         */
    api = "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&units=imperial&APPID="+key;
-   console.log(api);
         $.getJSON(api,function(json){
                 apidata = json;
-                console.log(json);
                 renderData(json,cel);
                 
               $("#toggle").click(function(){

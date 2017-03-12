@@ -1,7 +1,6 @@
 body{
-font-family: 'Lato', sans-serif;
-  background: #330867;
-  background-image: linear-gradient(#30cfd0 0%, #330867 100%);
+	font-family: 'Lato', sans-serif;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -28,13 +27,12 @@ font-family: 'Lato', sans-serif;
   justify-content: center;
   -webkit-align-items: center;
     align-items: center;
-
   text-align: center;
 }
 
 footer{
  position:fixed;
-  padding-bottom:1%;
+  padding:1%;
  left:0;
   bottom:0;
 }
@@ -55,16 +53,24 @@ img{
 }
 .location{
   text-align: left;
+  padding-right: 2%;
 }
 
 .weather-params{  
+display: table-cell;
   text-align: right;
 }
 
 #city, #lat, #lon, .temp{
-  line-height: 2em;
+  line-height: 2.5em;
 }
-#speed{
-  line-height: 1.9em;
+
+.temp, #speed{
+  line-height: 2.2em;
+}
+
+.temp:hover{
+  font-weight: bold;
+  cursor: pointer;
 }
 
