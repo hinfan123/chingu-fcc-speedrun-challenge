@@ -11,3 +11,17 @@ Build an app that is functionally similar to this: https://codepen.io/FreeCodeCa
 * User Story: I can press a button to tweet out a quote.
 
 ## Notes
+
+I have used:
+
+* Bootstrap CSS Flexbox for layout.
+
+* Fontawesome for icons.
+
+## View Project
+
+* This project is live [here](http://nice-turn.surge.sh/)
+
+* Alternatively, you can clone/download it and open index.html.
+
+* Read a blog post about it [here](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-3-random-quotes-app-4383c4184ab4#.d71n7ay8a)
