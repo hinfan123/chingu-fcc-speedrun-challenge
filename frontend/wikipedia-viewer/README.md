@@ -17,3 +17,9 @@ Build an app that is functionally similar to this: https://codepen.io/FreeCodeCa
 **Hint #3:** Use this link to experiment with Wikipedia's API.
 
 ## Notes
+
+This project is live [here]().
+
+Alternatively, you can clone/download it and open index.html.
+
+Read a blog post about it [here]().
