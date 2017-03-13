@@ -1,116 +1,112 @@
+@import "compass/css3";
+
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  box-sizing:border-box; 
+  padding:0;
+  margin:0;
 }
 
-html {
-  height: 100%;
-}
+html { height:100%; }
 
 body {
-  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-  text-align: center;
+  font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  text-align:center; 
   /*background:linear-gradient(45deg, #aed2f7, #f8f0b6);*/
-  background: #f7fbfc;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #f7fbfc 0%, #d9edf2 19%, #add9e4 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #f7fbfc 0%, #d9edf2 19%, #add9e4 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #f7fbfc 0%, #d9edf2 19%, #add9e4 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
-  min-height: 100%;
-  padding: 5%;
+background: #f7fbfc; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #f7fbfc 0%, #d9edf2 19%, #add9e4 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #f7fbfc 0%,#d9edf2 19%,#add9e4 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #f7fbfc 0%,#d9edf2 19%,#add9e4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  min-height:100%;
+  padding:5%;
 }
 
 .search-box {
-  margin: 30px auto 0 auto;
-  position: relative;
-  width: 300px;
+  margin:30px auto 0 auto;
+  position:relative;
+  width:300px;
 }
 
 .search-box p {
-  width: 50px;
-  height: 50px;
-  border: 10px solid #08C;
-  border-radius: 30px;
-  background: white;
-  transition: all 0.3s ease-out;
-  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4), inset 0 2px 1px rgba(0, 0, 0, 0.4);
-  position: relative;
+  width:50px;
+  height:50px;
+  border:10px solid #08C;
+  border-radius:30px;
+  background:white;
+  transition:all 0.3s ease-out;
+  box-shadow:
+    0 3px 2px rgba(0,0,0,0.4),
+    inset 0 2px 1px rgba(0,0,0,0.4);
+  position:relative;
 }
 
 .search-box p:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 10px;
-  height: 30px;
-  background: #08C;
-  border-radius: 30px;
-  transform: rotate(-45deg);
-  bottom: -23px;
-  right: -15px;
-  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+ 	content:"";
+  display:block;
+  position:absolute;
+  width:10px;
+  height:30px;
+  background:#08C;
+  border-radius:30px;
+  transform:rotate(-45deg);
+  bottom:-23px;
+  right:-15px;
+  box-shadow: 0 3px 2px rgba(0,0,0,0.4);
 }
 
-.search-box input[type=text] {
-  width: 100%;
-  text-indent: 30px;
-  height: 100%;
-  border-radius: 30px;
-  border: none;
-  transition: all 0.3s ease-out;
-  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.4);
-}
-.search-box input[type=text]:focus {
-  outline: none;
-  border-radius: 30px;
+.search-box input[type=text]{
+ 	width:100%;
+  text-indent:30px;
+  height:100%;
+  border-radius:30px;
+  border:none;
+  transition:all 0.3s ease-out;
+  box-shadow:inset 0 2px 2px rgba(0,0,0,0.4);
+  
+  &:focus {
+   	outline:none; 
+    border-radius:30px;
+  }
 }
 
 .search-box p.expanded {
-  width: 300px;
+ 	width:300px;
 }
 
-.search-box p.expanded input[type=text] {
-  text-indent: 20px;
+.search-box p.expanded input[type=text]{
+ 	text-indent:20px; 
 }
 
 .footerholder {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  position: fixed;
-  text-align: center;
-  width: 100%;
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
 }
 
 footer {
-  background: none repeat scroll 0 0;
-  height: 40px;
-  margin: auto;
-  width: 400px;
+    background: none repeat scroll 0 0 ;
+    height: 40px;
+    margin: auto;
+    width: 400px;
 }
-
-img {
+img{
   max-width: 15%;
 }
 
-* {
+*{
   font-family: 'Sansita', sans-serif;
 }
-
 #random {
-  text-decoration: none;
-  color: white;
+  text-decoration:none;
+  color:white;
 }
 
-li {
-  list-style: none;
-  background-color: white;
-  border: 3px solid #08C;
+li{
+  list-style:none;
+  background-color:white;
+  border:3px solid #08C;
   border-radius: 15px;
   margin: 2%;
   text-align: left;
