@@ -19,8 +19,8 @@ I have used:
 
 ## View Project
 
-* This project is live [here]()
+* This project is live [here](http://waggish-comb.surge.sh/)
 
 * Alternatively, you can clone/download it and open index.html. 
 
-* Read a blog post about it [here]()
+* Read a blog post about it [here](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-4-javascript-calculator-cfd0f60e4810#.jjwmbonb2)
