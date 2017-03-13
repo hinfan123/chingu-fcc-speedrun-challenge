@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Clock</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class = "pomodoro">
+<div class="timer">Set timer
+    <button id="timer-plus" onclick=Tincrease(timerCountVal)>+</button>
+    <span id="timer-count">25</span>
+    <button id="timer-minus" onclick=Tdecrease(timerCountVal)>-</button>
+    </div>
+<div class="break">Set break
+    <button id="break-plus" onclick=Bincrease(brkCountVal)>+</button>
+    <span id="break-count">5</span>
+    <button id="break-minus" onclick=Bdecrease(brkCountVal)>-</button>
+    </div>
+<button id="start" onclick="Tstart()">Start</button>
+<button id="reset" onclick="reset()">Reset</button>
+<div id="countdown"></div>
+<button>Break Time! <span id="breakTime"></span> </button>
+    </div>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

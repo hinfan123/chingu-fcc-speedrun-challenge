@@ -1,0 +1,18 @@
+.pomodoro{
+    position: absolute;
+    width: 60vw;
+    height:50vh;
+    text-align: center;
+    border:2px solid black;
+    top:15%;
+    left:20%;
+}
+
+.timer{
+    width:35%;
+    height:10%;
+    background: #8b0000;
+    border-radius: 15px;
+    padding:2%;
+    color: #f5deb3;
+    }
