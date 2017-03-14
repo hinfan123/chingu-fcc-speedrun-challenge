@@ -59,9 +59,14 @@ function Tstart(){
 		c--;
 		var min = setInterval(minCounter, 1000);
 		function minCounter(){
-			
+			if((minRem>=0)&&(minRem<10)){
+                countDown.textContent = c + ' : 0' + minRem;
+            }
+            else{
 			countDown.textContent = c + ' : ' + minRem;
+            }
 			minRem--;
+            
 			if(minRem < 0){
 				clearInterval(min);
 			}
@@ -87,8 +92,12 @@ function Bstart(){
     c--;
 	var min = setInterval(minCounter, 1000);
 		function minCounter(){
-			
+			if((minRem>=0)&&(minRem<10)){
+                btime.textContent = c + ' : 0' + minRem;
+            }
+            else{
 			btime.textContent = c + ' : ' + minRem;
+            }
 			minRem--;
 			if(minRem < 0){
 				clearInterval(min);
