@@ -15,4 +15,35 @@
     border-radius: 15px;
     padding:2%;
     color: #f5deb3;
+    display: inline-block;
+    }
+
+.break{
+    width:35%;
+    height:10%;
+    background: #8b0000;
+    border-radius: 15px;
+    padding:2%;
+    color: #f5deb3;
+    display: inline-block;
+    }
+
+#start{
+    width:35%;
+    height:10%;
+    background: #8b0000;
+    border-radius: 15px;
+    padding:2%;
+    color: #f5deb3;
+    display: inline-block;
+    }
+
+#reset{
+    width:35%;
+    height:10%;
+    background: #8b0000;
+    border-radius: 15px;
+    padding:2%;
+    color: #f5deb3;
+    display: inline-block;
     }
