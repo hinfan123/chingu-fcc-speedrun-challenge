@@ -1,6 +1,3 @@
-var timer = 25;
-var brk = 5;
-
 var timerCount = document.getElementById("timer-count");
 var timerCountVal = parseInt(timerCount.textContent); 
 
@@ -18,6 +15,8 @@ countDown.innerHTML = timerCountVal;
 
 var btime = document.getElementById("breakTime");
 btime.innerHTML = brkCountVal;
+
+ var starter;
 
 function Tincrease(val){
     timerCountVal = ++timerCountVal;
@@ -53,7 +52,7 @@ function Bdecrease(val){
 
 function Tstart(){
     var starter = setInterval(counter,1000);
-    function counter(val){
+	function counter(){
     var c = parseInt(countDown.textContent);
     c--;
     countDown.textContent = c;
@@ -61,19 +60,23 @@ function Tstart(){
       clearInterval(starter);
       Bstart();
     }
-}
+	document.getElementById("stop").addEventListener('click', function(){
+		clearInterval(starter);
+	});
+ }  
 }
 
 function Bstart(){
+	document.getElementById("brk-counter").style.display = "block";
     var starter = setInterval(counter,1000);
-    function counter(val){
+    function counter(){
     var c = parseInt(btime.textContent);
     c--;
     btime.textContent = c;
     if(c==0){
       clearInterval(starter);
     }
-}
+  }
 }
 
 function reset(){
@@ -82,3 +85,4 @@ function reset(){
     countDown.innerHTML = 25;
     btime.innerHTML = 5;
 }
+
