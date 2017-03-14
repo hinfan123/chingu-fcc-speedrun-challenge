@@ -18,8 +18,8 @@ Build an app that is functionally similar to this: https://codepen.io/FreeCodeCa
 
 ## Notes
 
-This project is live [here]().
+This project is live [here](http://staking-calculator.surge.sh/).
 
 Alternatively, you can clone/download it and open index.html.
 
-Read a blog post about it [here]().
+Read a blog post about it [here](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-5-wikipedia-viewer-723e4a4d5bbc#.5wmeijpaj).
