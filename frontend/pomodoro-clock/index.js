@@ -52,12 +52,12 @@ function Bdecrease(val){
 
 function Tstart(){
 	counter();
-    var starter = setInterval(counter,1000);
+    var starter = setInterval(counter,60000);
 	function counter(){
 		var c = parseInt(countDown.textContent);
 		var minRem = 59;
 		c--;
-		var min = setInterval(minCounter, 1);
+		var min = setInterval(minCounter, 1000);
 		function minCounter(){
 			if((minRem>=0)&&(minRem<10)){
                 countDown.textContent = c + ' : 0' + minRem;
