@@ -88,7 +88,7 @@ h1{
 }
 	
 #brk-counter{
-	/* display:none; */
+	display:none;
 	position: relative;
 	padding: 3%;
 	width:50%;
