@@ -51,17 +51,29 @@ function Bdecrease(val){
 }
 
 function Tstart(){
-    var starter = setInterval(counter,1000);
+	counter();
+    var starter = setInterval(counter,60000);
 	function counter(){
-    var c = parseInt(countDown.textContent);
-    c--;
-    countDown.textContent = c;
+		var c = parseInt(countDown.textContent);
+		var minRem = 59;
+		c--;
+		var min = setInterval(minCounter, 1000);
+		function minCounter(){
+			
+			countDown.textContent = c + ' : ' + minRem;
+			minRem--;
+			if(minRem < 0){
+				clearInterval(min);
+			}
+		}
+	
     if(c==0){
       clearInterval(starter);
       Bstart();
     }
 	document.getElementById("stop").addEventListener('click', function(){
 		clearInterval(starter);
+		clearInterval(min);
 	});
  }  
 }
@@ -71,8 +83,17 @@ function Bstart(){
     var starter = setInterval(counter,1000);
     function counter(){
     var c = parseInt(btime.textContent);
+	var minRem = 59;
     c--;
-    btime.textContent = c;
+	var min = setInterval(minCounter, 1000);
+		function minCounter(){
+			
+			btime.textContent = c + ' : ' + minRem;
+			minRem--;
+			if(minRem < 0){
+				clearInterval(min);
+			}
+		}
     if(c==0){
       clearInterval(starter);
     }
