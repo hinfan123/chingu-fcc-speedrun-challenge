@@ -1,17 +1,17 @@
 body{
 	font-family: 'Lato', sans-serif;
-  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-  height: 100%;
+	background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+	height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-      color: white;
+    color: white;
   
 }
 
 .content{
   margin:5%;
- padding:5%;
+  padding:5%;
 }
 
 .header{

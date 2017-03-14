@@ -52,12 +52,12 @@ function Bdecrease(val){
 
 function Tstart(){
 	counter();
-    var starter = setInterval(counter,60000);
+    var starter = setInterval(counter,1000);
 	function counter(){
 		var c = parseInt(countDown.textContent);
 		var minRem = 59;
 		c--;
-		var min = setInterval(minCounter, 1000);
+		var min = setInterval(minCounter, 1);
 		function minCounter(){
 			if((minRem>=0)&&(minRem<10)){
                 countDown.textContent = c + ' : 0' + minRem;
@@ -74,6 +74,7 @@ function Tstart(){
 	
     if(c==0){
       clearInterval(starter);
+      (document.getElementById("audio")).play();
       Bstart();
     }
 	document.getElementById("stop").addEventListener('click', function(){
@@ -84,8 +85,9 @@ function Tstart(){
 }
 
 function Bstart(){
+    counter();
 	document.getElementById("brk-counter").style.display = "block";
-    var starter = setInterval(counter,1000);
+    var starter = setInterval(counter,60000);
     function counter(){
     var c = parseInt(btime.textContent);
 	var minRem = 59;
@@ -103,7 +105,7 @@ function Bstart(){
 				clearInterval(min);
 			}
 		}
-    if(c==0){
+    if(c<0){
       clearInterval(starter);
     }
   }
