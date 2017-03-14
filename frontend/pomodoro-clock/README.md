@@ -14,7 +14,7 @@ Build an app that is functionally similar to this: https://codepen.io/FreeCodeCa
 
 ## Notes
 
-This project is live [here](fearless-class.surge.sh)
+This project is live [here](http://fearless-class.surge.sh/)
 
 Alternatively, you can clone/download it and open index.html.
 
