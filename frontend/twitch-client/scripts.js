@@ -106,21 +106,11 @@ var data = [
 ];
 
 $(document).ready(function(){
-  for(let i =0;i<user.length;i++){ // for loop to iterate on user list
-   for(let j=0;j<data.length;j++){
-    if(data[j]["stream"]["display_name"] == user[i]){
-      $("#displayName").html(user[i]);
-      $("#onoff").html('online');
-    } //end if stream online
-    else if(data[j]["display_name"] == user[i]){
-        $("#onoff").html('offline');
-      
-    } // end if stream offline
-     else{
-       $("#onoff").html(data[j]["error"]);
-     } 
-    
-  
-   }//end of data for loop
-  }//end of user for loop  
+   user.forEach(function(u){
+           data.forEach(function(entry){
+              if (entry.stream == null){
+                 console.log(entry);
+       }
+      });
+   });
 });
