@@ -1,3 +1,5 @@
+// api call - https://wind-bow.gomix.me/twitch-api
+var user = ["ESL_SC2", "OgamingSC2", "cretetion", "FreeCodeCamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
 
 var data = [
   {
@@ -104,10 +106,21 @@ var data = [
 ];
 
 $(document).ready(function(){
+  for(let i =0;i<user.length;i++){ // for loop to iterate on user list
+   for(let j=0;j<data.length;j++){
+    if(data[j]["stream"]["display_name"] == user[i]){
+      $("#displayName").html(user[i]);
+      $("#onoff").html('online');
+    } //end if stream online
+    else if(data[j]["display_name"] == user[i]){
+        $("#onoff").html('offline');
+      
+    } // end if stream offline
+     else{
+       $("#onoff").html(data[j]["error"]);
+     } 
     
-    var url = 'https://wind-bow.gomix.me/twitch-api/'
-    $.getJSON(url,function(data1){
-
-    });
-
+  
+   }//end of data for loop
+  }//end of user for loop  
 });
