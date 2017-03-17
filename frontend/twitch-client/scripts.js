@@ -1,5 +1,76 @@
 // api call - https://wind-bow.gomix.me/twitch-api
-var user = ["ESL_SC2", "OgamingSC2", "cretetion", "FreeCodeCamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+
+var streamers = ["FreeCodeCamp" , "ESL_SC2", "OgamingSC2", "cretetion",  "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas","brunofin"];
+
+$(document).ready(function(){
+  var errUser = [];
+  var i;
+  for(i= 0;i<(streamers.length);i++){
+    var url = 'https://wind-bow.gomix.me/twitch-api/channels/'+streamers[i];
+	$.ajax({
+		type: 'GET',
+		dataType: "jsonp",
+		url: url,
+		success: function(dataI){
+			var mystream = dataI.url;
+			var myname = dataI.display_name;
+			var mylogo = dataI.logo;
+			if(!dataI.error){
+			$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/'+dataI.name).done(function(data2){
+				console.log(data2);
+				if(data2.stream === null){ //offline
+					$('#displayName').append('<li> '+myname + '</li>');
+					$("#logo").append('<li><img src = "'+mylogo+'" /></li>');
+					$("#link").append('<li> <a href = "' + mystream +'" target = "_blank">Offline</a></li>');
+					$('#status').append('<li> Not currently streaming </li>');
+				}
+				else{ //online
+					$('#displayName').append('<li> '+myname + '</li>');
+					$("#logo").append('<li><img src = "'+mylogo+'" /></li>');
+					$("#link").append('<li> <a href = "' + mystream +'" target = "_blank">Online</a></li>');
+					$('#status').append('<li>'+ data2["stream"]["game"] + ' </li>');
+				}
+			});
+			}
+			else{
+				
+			}
+			
+		},
+		error: function(err){
+			
+				$('#displayName').append('<li> '+streamers[i]+' is invalid</li>');
+			
+		}
+	});
+    /* $.getJSON(url,function(data1){
+    if(data1.stream === null){
+      $("#displayName").prepend(streamers[i]);
+      var link = "https://www.twitch.tv/"+streamers[i];
+      $("#link").attr('href',link);
+       $("#onoff").prepend("Offline ");
+    }
+      else{
+         var logo = data1["stream"]["channel"]["logo"];
+        $("#logo").attr('src',logo);
+        $("#displayName").prepend(data1["stream"]["channel"]["display_name"]);
+        var link = "https://www.twitch.tv/"+streamers[i];
+         $("#link").attr('href',data1["stream"]["channel"]["url"]);
+       $("#onoff").prepend("Online ");
+        $("#status").prepend(data1["stream"]["channel"]["status"]);
+      } */
+     
+     // $("#logo").prepend('<img src="'+logo+'" />');
+   } 
+   
+   
+});
+
+
+
+
+/* // api call - https://wind-bow.gomix.me/twitch-api
+var streams = ["ESL_SC2", "OgamingSC2", "FreeCodeCamp", "noobs2ninjas","brunofin"];
 
 var data = [
   {
@@ -106,11 +177,14 @@ var data = [
 ];
 
 $(document).ready(function(){
-   user.forEach(function(u){
-           data.forEach(function(entry){
-              if (entry.stream == null){
-                 console.log(entry);
-       }
-      });
-   });
+   for(var i =0; i<streams.length; i++){
+           var result = data.filter(function( obj ) {
+             if((obj.stream !== null)||(obj.stream !== undefined)){
+                  return obj["stream"]["name"] == streams[i];
+             }
 });
+              
+       
+    
+   }
+}); */
