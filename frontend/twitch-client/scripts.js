@@ -15,7 +15,7 @@ $(document).ready(function(){
 			var mylogo = dataI.logo;
 			if(!dataI.error){
 			$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/'+dataI.name).done(function(data2){
-				console.log(data2);
+				
 				if(data2.stream === null){ //offline
 					$('#result').append('<div class="media" ><div class="media-left"><img class = "media-object" src = "'+mylogo+'" /></div><div class="media-body"><h4 class="media-heading">'+myname + '</h4><a href = "' + mystream +'" target = "_blank">Offline</a><br>Not currently streaming </div></div>');
 				}
