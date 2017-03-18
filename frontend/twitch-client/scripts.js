@@ -25,7 +25,7 @@ $(document).ready(function(){
 			});
     }
     if(dataI.error){ //not a user
-            $('#result').append('<div class="media"><div class="media-right media-body">'+dataI.message+'</div></div>');
+            $('#result').append('<div class="media"><div class="media-left"><img class = "media-object" src = "image.png" /></div><div class="media-body"><div class="media-body">'+dataI.message+'</div></div>');
       }
 			
 		}
