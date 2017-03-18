@@ -67,7 +67,7 @@ Copy this table as needed to make a separate table for each team member for reco
 |   11.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-3-random-quotes-app-4383c4184ab4#.d71n7ay8a)  | [Build a Random Quote Machine](./frontend/random-quote-machine) |  |
 |  10.03.2017    |  [Medium Post ](https://medium.com/@pankajashree/chingu-fcc-speedrun-challenge-day-2-show-the-local-weather-e63fd34bbe6b#.tci30dykm)  | [Show the Local Weather](./frontend/local-weather) |  |
 |   13.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-5-wikipedia-viewer-723e4a4d5bbc#.5wmeijpaj)  | [Build a Wikipedia Viewer](./frontend/wikipedia-viewer) |  |
-|   17.03.2017   |  [Medium Pst](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-7-twitchtv-app-7dab32526d8d#.dh7exou9c)  | [Use the Twitch.tv JSON API](./frontend/twitch-client) |  |
+|   17.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-7-twitchtv-app-7dab32526d8d#.dh7exou9c)  | [Use the Twitch.tv JSON API](./frontend/twitch-client) |  |
 |   12.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-4-javascript-calculator-cfd0f60e4810#.jjwmbonb2)  | [Build a JavaScript Calculator](./frontend/calculator) |  |
 |   14.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-6-pomodoro-clock-1f571eb933fa#.w9979lwc5)  | [Build a Pomodoro Clock](./frontend/pomodoro-clock) |  |
 |      |  [ ]()  | [Build a Tic Tac Toe Game](./frontend/tictactoe-game) |  |
