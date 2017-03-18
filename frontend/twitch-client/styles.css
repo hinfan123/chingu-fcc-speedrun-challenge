@@ -1,14 +1,8 @@
-ul{
-    list-style: none;
-}
-img{
-  width: 40%;
-}
-
-li{
+.media{
+  
 	margin: 5%;
 }
 
-.row div{
-	height: 40%;
+ img{
+ max-width: 30%;
 }
