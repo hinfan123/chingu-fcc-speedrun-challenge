@@ -19,3 +19,9 @@ Build an app that is functionally similar to this: https://codepen.io/FreeCodeCa
 **UPDATE:** Due to a change in conditions on API usage explained here Twitch.tv now requires an API key, but we've built a workaround. Use https://wind-bow.gomix.me/twitch-api instead of twitch's API base URL (i.e. https://api.twitch.tv/kraken ) and you'll still be able to get account information, without needing to sign up for an API key.
 
 ## Notes
+
+This project is live [here](http://functional-celery.surge.sh/)
+
+Alternatively, you can clone/download it and open index.html.
+
+Read a blog post about it [here](https://medium.com/p/5f47b5c39cb8/edit)
