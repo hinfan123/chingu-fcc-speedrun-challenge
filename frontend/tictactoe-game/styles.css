@@ -1,0 +1,56 @@
+#header{
+  margin: 2%;
+}
+
+.player h3{
+  margin: 2%;
+}
+
+.player btn{
+  text-decoration: none;
+  outline: none;
+  background: none;
+  
+}
+
+button:focus{
+  outline: none;
+  border: none;
+  
+}
+
+button{
+  cursor: pointer;
+}
+
+.box{
+  position:relative;
+  left: 25%;
+  margin:2%;
+  transition: all 0.5s;
+}
+
+.box .btn {
+  width: 15%;
+  height:15%;
+  border: 1px solid blue;
+  border-radius: none;
+  padding: 5%;
+  margin:1%;
+  cursor: pointer;
+}
+
+footer{
+  bottom:0;
+  position:absolute;
+  text-align: center;
+  width:100%;
+}
+
+.bottom{
+  top: 70%;
+}
+
+a{
+    text-decoration: none;
+}
