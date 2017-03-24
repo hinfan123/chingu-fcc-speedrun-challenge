@@ -1,16 +1,22 @@
 var tiles = document.getElementsByClassName("tile");
 var buttons = document.getElementsByClassName("button");
 
-var state = [0,0,0,0,0,0,0,0,0];
+for(let i =0; i<tiles.length; i++){
+  tiles[i].innerHTML = '#';
+}
+
+var state = [0,0,0,0,0,0,0,0,0]; //empty tiles
 var game = true;
 
 var human = false;
-var computer = true;
+var computer = true; //computer's pov
 
 var humVal = -1;
 var comVal = 1;
 
-var humText = 'X', comText = 'O';
+//default values
+var humText = 'X'; 
+var comText = 'O';
 
 var winMatrix = [
   [0, 1, 2],
@@ -23,6 +29,11 @@ var winMatrix = [
   [2, 4, 6]
 ]
 
+function setText(textVal){
+	humText = textVal.charAt(0);
+	comText = textVal.charAt(1);
+} 
+
 function reset(){
   for ( let x=0; x<9; x++){
     tiles[x].innerHTML = ' ';
@@ -31,14 +42,9 @@ function reset(){
   game = true;
 }
 
-function setText(textVal){
-	humText = textVal.charAt(0);
-	comText = textVal.charAt(1);
-}
-
 function claim(clicked){
   if(!game) return;
-  
+  //get index of tile thats clicked
   for(let x = 0; x<9; x++){
     if(tiles[x] == clicked && state[x] ==0){
       set(x,human);
@@ -46,7 +52,6 @@ function claim(clicked){
     }
   }
 }
-
 
 function set(index, player){
   if(!game){
@@ -56,31 +61,28 @@ function set(index, player){
   if(state[index] == 0){
     if(player == human){
       tiles[index].style.color = 'red';
-	  tiles[index].innerHTML = humText;
+	    tiles[index].innerHTML = humText;
       state[index] = humVal;
     }
-    else{
+    else if(player == computer){
       tiles[index].style.color = 'green';
       state[index] = comVal;
-	  tiles[index].innerHTML = comText;
+	    tiles[index].innerHTML = comText;
     }
     
     if(checkWin(state,player)){
+      if(player == 'human') alert('You won!');
+      else alert('You lost!') 
       game = false;
-       checkGame();
-       
     }
-   
   }
 }
 
-function checkGame(){
-  if(!game) alert('You won!');
-  else alert('You lost!')
-}
-
 function checkWin(board, player){
-  var value = player == human ? humVal : comVal;
+  var value = player == human ? humVal : comVal; 
+  //value is -1 if human, 1 if computer
+  
+  //check win combinations
   for(var x =0; x<8; x++){
     var win = true;
     for(var y =0; y<3; y++){
@@ -102,33 +104,40 @@ function checkFull(board){
 }
 
 function callAI(){
+  console.log('in callAI');
   aiTurn(state, 0, computer);
 }
 
 function aiTurn(board, depth, player){
-  
    var value = player == human ? humVal : comVal;
   
-  if(checkWin(board, player)) return -10-depth; //human wins
+  if(checkWin(board, !player)) return -10+depth; //human wins
   
   if(checkFull(board)) return 0; //draw
  
   var max = -Infinity;
   var index =0;
   
+  //check moves tile by tile and calc scores for each move. 
+  //choose the move with maximum score.
   for(let x =0 ; x<9; x++){
+
     if(board[x] == 0){
       var newBoard = board.slice(); //copy of board to simulate move
       newBoard[x] = value;
       
-      var moveVal = -aiTurn(newBoard,depth+1, player);
+      //recursive play, simulating human and comp alternatively.
+      //when opposite player wins, comp loses points, hence !player
+      //if ai loses, points decreases for ai --> human wins
+      var moveVal = -aiTurn(newBoard,(depth + 1), !player);
       
       if(moveVal > max){
-        max = moveVal;
+        max = moveVal; //best move will have max score 
         index = x;
       }
     }
   }
   if (depth == 0) set(index,computer);
+  return max;
 }
 

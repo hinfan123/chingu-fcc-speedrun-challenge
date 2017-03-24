@@ -10,13 +10,11 @@
   text-decoration: none;
   outline: none;
   background: none;
-  
 }
 
 button:focus{
   outline: none;
   border: none;
-  
 }
 
 button{
@@ -53,4 +51,8 @@ footer{
 
 a{
     text-decoration: none;
+}
+
+.tile{
+  padding: 2%;
 }
