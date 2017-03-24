@@ -1,9 +1,6 @@
-#header{
-  margin: 2%;
-}
-
-.player h3{
-  margin: 2%;
+body{
+ font-family: 'Indie Flower', cursive;
+  height:100%;
 }
 
 .player btn{
@@ -17,32 +14,36 @@ button:focus{
   border: none;
 }
 
-button{
+button:active{
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 
 .box{
-  position:relative;
-  left: 25%;
-  margin:2%;
-  transition: all 0.5s;
+  margin:2% auto;
 }
 
 .box .btn {
-  width: 15%;
-  height:15%;
+  line-height: 1.5em;
+  font-weight: bold;
+  width:10%;
   border: 1px solid blue;
   border-radius: none;
-  padding: 5%;
+  padding: 1%;
   margin:1%;
   cursor: pointer;
+  font-size: 2em;
 }
 
 footer{
   bottom:0;
-  position:absolute;
-  text-align: center;
+  position:fixed;
+  background:#0000ff;
   width:100%;
+  text-align: center;
+  color: white;
+  padding:0.5%;
 }
 
 .bottom{
@@ -50,9 +51,20 @@ footer{
 }
 
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.tile{
-  padding: 2%;
+#won{
+  color: #7cfc00;
+  border-radius: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-top:1%;
+}
+#lost{
+  padding-top:1%;
+  color:#ff4500;
+  border-radius: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
 }

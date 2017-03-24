@@ -1,8 +1,14 @@
+//to do
+//set x player play first
+//display info that human is x by default
+
 var tiles = document.getElementsByClassName("tile");
 var buttons = document.getElementsByClassName("button");
+document.getElementById('won').style.display = 'none';
+document.getElementById('lost').style.display = 'none';
 
 for(let i =0; i<tiles.length; i++){
-  tiles[i].innerHTML = '#';
+  tiles[i].innerHTML = '&nbsp';
 }
 
 var state = [0,0,0,0,0,0,0,0,0]; //empty tiles
@@ -40,6 +46,11 @@ function reset(){
     state[x] = 0;
   }
   game = true;
+  document.getElementById('won').style.display = 'none';
+  document.getElementById('lost').style.display = 'none';
+  for(let i =0; i<tiles.length; i++){
+  tiles[i].innerHTML = '&nbsp';
+}
 }
 
 function claim(clicked){
@@ -71,8 +82,8 @@ function set(index, player){
     }
     
     if(checkWin(state,player)){
-      if(player == 'human') alert('You won!');
-      else alert('You lost!') 
+      if(player == 'human') document.getElementById('won').style.display = 'block';
+      else document.getElementById('lost').style.display = 'block';
       game = false;
     }
   }
