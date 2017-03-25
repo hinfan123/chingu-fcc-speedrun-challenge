@@ -15,7 +15,7 @@ button:focus{
 }
 
 h1{
-  margin: 1%;
+  margin-top: 1%;
 }
 button:active{
   cursor: pointer;
@@ -24,7 +24,7 @@ button:active{
 }
 
 .box{
-  margin:2% auto;
+  margin:1% auto;
 }
 
 .box .btn {
@@ -33,7 +33,6 @@ button:active{
   width:10%;
   border: 1px solid blue;
   border-radius: none;
-  padding: 1%;
   margin:1%;
   cursor: pointer;
   font-size: 2em;
