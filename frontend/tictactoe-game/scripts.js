@@ -1,12 +1,9 @@
-//set x player play first
-//display info that human is x by default
-
 var tiles = document.getElementsByClassName("tile");
 var buttons = document.getElementsByClassName("button");
 document.getElementById('won').style.display = 'none';
 document.getElementById('lost').style.display = 'none';
 document.getElementById('draw').style.display = 'none';
-
+//empty tiles
 for(let i =0; i<tiles.length; i++){
   tiles[i].innerHTML = '&nbsp';
 }
@@ -38,6 +35,7 @@ var winMatrix = [
 function setText(textVal){
 	humText = textVal.charAt(0);
 	comText = textVal.charAt(1);
+  if(comText == 'X') callAI();
 } 
 
 function reset(){
