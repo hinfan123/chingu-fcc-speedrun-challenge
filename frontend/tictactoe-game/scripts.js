@@ -40,16 +40,13 @@ function setText(textVal){
 
 function reset(){
   for ( let x=0; x<9; x++){
-    tiles[x].innerHTML = ' ';
+    tiles[x].innerHTML = '&nbsp';
     state[x] = 0;
   }
   game = true;
   document.getElementById('won').style.display = 'none';
   document.getElementById('lost').style.display = 'none';
   document.getElementById('draw').style.display = 'none';
-  for(let i =0; i<tiles.length; i++){
-  tiles[i].innerHTML = '&nbsp';
-}
 }
 
 function claim(clicked){
