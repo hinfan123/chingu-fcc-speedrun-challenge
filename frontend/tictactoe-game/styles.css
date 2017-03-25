@@ -15,7 +15,7 @@ button:focus{
 }
 
 h1{
-  margin: 2%;
+  margin: 1%;
 }
 button:active{
   cursor: pointer;
@@ -64,7 +64,7 @@ a{
   font-weight: bold;
   padding-top:1%;
 }
-#lost{
+#lost, #draw{
   padding-top:1%;
   color:#ff4500;
   border-radius: 15px;

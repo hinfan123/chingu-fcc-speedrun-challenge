@@ -1,4 +1,3 @@
-//to do
 //set x player play first
 //display info that human is x by default
 
@@ -6,6 +5,7 @@ var tiles = document.getElementsByClassName("tile");
 var buttons = document.getElementsByClassName("button");
 document.getElementById('won').style.display = 'none';
 document.getElementById('lost').style.display = 'none';
+document.getElementById('draw').style.display = 'none';
 
 for(let i =0; i<tiles.length; i++){
   tiles[i].innerHTML = '&nbsp';
@@ -48,6 +48,7 @@ function reset(){
   game = true;
   document.getElementById('won').style.display = 'none';
   document.getElementById('lost').style.display = 'none';
+  document.getElementById('draw').style.display = 'none';
   for(let i =0; i<tiles.length; i++){
   tiles[i].innerHTML = '&nbsp';
 }
@@ -81,12 +82,19 @@ function set(index, player){
 	    tiles[index].innerHTML = comText;
     }
     
-    if(checkWin(state,player)){
+    if(checkFull(state)) document.getElementById('draw').style.display = 'block';
+
+    else if(checkWin(state,player)){
+      
       if(player == 'human') document.getElementById('won').style.display = 'block';
       else document.getElementById('lost').style.display = 'block';
+      
       game = false;
     }
+    
   }
+
+  
 }
 
 function checkWin(board, player){
@@ -115,7 +123,6 @@ function checkFull(board){
 }
 
 function callAI(){
-  console.log('in callAI');
   aiTurn(state, 0, computer);
 }
 
