@@ -70,7 +70,7 @@ Copy this table as needed to make a separate table for each team member for reco
 |   17.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-7-twitchtv-app-7dab32526d8d#.dh7exou9c)  | [Use the Twitch.tv JSON API](./frontend/twitch-client) |  |
 |   12.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-4-javascript-calculator-cfd0f60e4810#.jjwmbonb2)  | [Build a JavaScript Calculator](./frontend/calculator) |  |
 |   14.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-6-pomodoro-clock-1f571eb933fa#.w9979lwc5)  | [Build a Pomodoro Clock](./frontend/pomodoro-clock) |  |
-|      |  [ ]()  | [Build a Tic Tac Toe Game](./frontend/tictactoe-game) |  |
+|   25.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-8-tic-tac-toe-app-5f47b5c39cb8#.8xtclywu6)  | [Build a Tic Tac Toe Game](./frontend/tictactoe-game) |  |
 |      |  [ ]()  | [Build a Simon Game](./frontend/simon-game) |  |
 |      |  [ ]()  | [Build a Markdown Previewer](./data-vis/markdown-previewer) |  |
 |      |  [ ]()  | [Build a Camper Leaderboard](./data-vis/camper-leaderboard) |  |
