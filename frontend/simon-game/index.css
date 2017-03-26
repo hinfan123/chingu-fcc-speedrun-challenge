@@ -1,0 +1,26 @@
+.grid{
+	position: absolute;
+	width:70%;
+	height:70%;
+}
+
+.box{
+	width:10%;
+	height:10%;
+}
+
+.red{
+	background:red;
+}
+
+.green{
+	background: green;
+}
+
+.blue{
+	background: blue;
+}
+
+.yellow{
+	background: yellow;
+}
