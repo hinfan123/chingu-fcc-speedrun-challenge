@@ -1,26 +1,32 @@
 .grid{
-	position: absolute;
-	width:70%;
-	height:70%;
+	
+	margin-right: auto;
+	margin-left:auto;
 }
 
-.box{
-	width:10%;
-	height:10%;
+#cell1 {  
+  background-color: rgb(51, 204, 0);
 }
 
-.red{
-	background:red;
+#cell2 {  
+  background-color: rgb(255, 0, 0);
 }
 
-.green{
-	background: green;
+#cell3 {  
+  background-color: rgb(255, 255, 0);
 }
 
-.blue{
-	background: blue;
+#cell4 {  
+  background-color: rgb(51, 102, 255);
 }
 
-.yellow{
-	background: yellow;
+@-webkit-keyframes blink {  
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.blinkdiv {
+    -webkit-animation-name: blink;  
+    -webkit-animation-iteration-count: 1;  
+    -webkit-animation-duration: 0.7s; 
 }
