@@ -13,6 +13,8 @@ gameCount.innerHTML = count;
 
 start.addEventListener('click',gameOn);
 
+// cell[1].addEventListener('click',userPlay(cell[1],1), false);
+
 function gameOn(){
         //computer plays
         c_disp.style.display = 'block';
@@ -38,4 +40,10 @@ function blink(ele){
     setTimeout(function() {
     ele.classList.remove('blinkdiv');
   }, 300);
+}
+
+//user move
+function userPlay(ele,ind){
+    blink(ele);
+    audio[ind].play();
 }
