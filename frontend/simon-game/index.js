@@ -1,37 +1,36 @@
 const cell = document.getElementsByClassName(`cell`); //all cells
 const audio = document.getElementsByTagName(`audio`); //all audios
 const start = document.getElementById('start'); 
-const c_disp = document.getElementById('count-disp'); 
-const gameCount = document.getElementById('count');
+const c_disp = document.getElementById('count-disp'); //count display div
+const gameCount = document.getElementById('count'); // span count
 c_disp.style.display = 'none';
-
-var cpattern= [];
-var userPattern = [];
-
 var count = 1;
 gameCount.innerHTML = count;
+var cpattern= [];
+var userPattern = [];
+var index;
+
+//generate 20 random computer moves and store in cpattern
+for(let i = 1; i <=20; i++){
+    cpattern.push(Math.floor(Math.random() * 4));
+}
 
 start.addEventListener('click',gameOn);
 
 // cell[1].addEventListener('click',userPlay(cell[1],1), false);
 
 function gameOn(){
-        //computer plays
-        c_disp.style.display = 'block';
-        for(count = 1; count <=20; count++){
-         genMove(); // add a random index to cpattern variable
-         cpattern.every(function(val){
-             blink(cell[val]);
-             audio[val].play();
-         });
+        
+        for(var x = 1; x<=20; x++)
+        {
+            index = cpattern[x];
+            c_disp.style.display = 'block';
+            setTimeout(blink(cell[index]),1000);
+            
         }
-}
+        
+        }
 
-//generate computer move
-function genMove(){
-    let index = Math.floor(Math.random() * 4);
-    cpattern.push(index);
-}
 
         
 //blink color
