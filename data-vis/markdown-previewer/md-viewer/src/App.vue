@@ -1,9 +1,11 @@
 <template>
-  <div id="app">
-    <h1>Markdown Previewer</h1>
-    <div id="text">
+  <div id="app" class="container">
+    <h1 class="page-header">Markdown Previewer</h1>
+    <div id="md" class="col-md-6">
+    <h2>Enter Markdown Text</h2>
     </div>
-    <div id="md">
+    <div id="preview" class="col-md-6">
+    <h2>Preview</h2>
     </div>
   </div>
 </template>
@@ -18,5 +20,7 @@ export default {
   }
 }
 </script>
+
+
 
 
