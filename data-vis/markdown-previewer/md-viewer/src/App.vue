@@ -7,7 +7,7 @@
     </div>
     <div id="preview" class="col-md-6">
     <h2>Preview</h2>
-    {{previewText}}
+    <div v-html='previewText'></div>
     </div>
   </div>
 </template>
