@@ -7,20 +7,35 @@
     </div>
     <div id="preview" class="col-md-6">
     <h2>Preview</h2>
-    {{md_preview}}
+    {{previewText}}
     </div>
   </div>
 </template>
 
 <script>
-var marked = require('marked');
+let marked = require('marked');
 
 export default {
   name: 'app',
   data () {
     return {
-      md_preview: md_text
+      md_text: '# Title'
     }
+  },
+  computed: {
+	previewText() {
+		marked.setOptions({
+		  renderer: new marked.Renderer(),
+		  gfm: true,
+		  tables: true,
+		  breaks: true,
+		  pedantic: false,
+		  sanitize: true,
+		  smartLists: true,
+		  smartypants: false
+		});
+		return marked(this.md_text)
+	}
   }
 }
 </script>
