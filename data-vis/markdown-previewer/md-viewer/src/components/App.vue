@@ -3,12 +3,12 @@
   <div class = "container">
   <app-header></app-header>
     <div id="md" class="col-md-6">
-    <h2 class="big">Enter Markdown Text</h2>
-    <textarea style="height:auto" rows="15" class='form-control' v-model='md_text'></textarea>
+    <h2 class="text-success text-center">Enter Markdown Text</h2>
+    <textarea style="height:auto" rows="16" class='form-control' v-model='md_text'></textarea>
     </div>
     <div id="preview" class="col-md-6">
-    <h2>Preview</h2>
-    <div v-html='previewText'></div>
+    <h2 class="text-success text-center">Preview</h2>
+    <div class = "well well-sm pre-scrollable" v-html='previewText' ></div>
     </div>
     </div>
     <app-footer></app-footer>
