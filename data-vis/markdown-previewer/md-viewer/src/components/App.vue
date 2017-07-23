@@ -2,9 +2,8 @@
   <div id="app">
   <div class = "container">
   <app-header></app-header>
-    <h3 class="big">Markdown Previewer</h3>
     <div id="md" class="col-md-6">
-    <h2>Enter Markdown Text</h2>
+    <h2 class="big">Enter Markdown Text</h2>
     <textarea style="height:auto" rows="15" class='form-control' v-model='md_text'></textarea>
     </div>
     <div id="preview" class="col-md-6">
@@ -25,7 +24,7 @@ export default {
   name: 'app',
   data () {
     return {
-      md_text: '# Title'
+      md_text: '# Title',
     }
   },
   computed: {
