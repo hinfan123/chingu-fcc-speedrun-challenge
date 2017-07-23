@@ -8,7 +8,7 @@
     </div>
     <div id="preview" class="col-md-6">
     <h2 class="text-success text-center">Preview</h2>
-    <div class = "well well-sm pre-scrollable" v-html='previewText' ></div>
+    <div class = "well well-sm pre-scrollable"  v-html='previewText' ></div>
     </div>
     </div>
     <app-footer></app-footer>
