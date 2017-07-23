@@ -15,4 +15,6 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Blog
+
+[Medium Article](https://medium.com/@pankajashree/markdown-previewer-using-vuejs-c4ea88457061).
