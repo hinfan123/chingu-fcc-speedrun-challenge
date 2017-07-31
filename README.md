@@ -72,7 +72,7 @@ Copy this table as needed to make a separate table for each team member for reco
 |   14.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-6-pomodoro-clock-1f571eb933fa#.w9979lwc5)  | [Build a Pomodoro Clock](./frontend/pomodoro-clock) |  |
 |   25.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-8-tic-tac-toe-app-5f47b5c39cb8#.8xtclywu6)  | [Build a Tic Tac Toe Game](./frontend/tictactoe-game) |  |
 |      |  [ ]()  | [Build a Simon Game](./frontend/simon-game) |  |
-|      |  [ ]()  | [Build a Markdown Previewer](./data-vis/markdown-previewer) |  |
+|   22.07.2017   |  [Medium Post](https://medium.com/chingu/markdown-previewer-using-vuejs-c4ea88457061)  | [Build a Markdown Previewer](./data-vis/markdown-previewer) |  |
 |      |  [ ]()  | [Build a Camper Leaderboard](./data-vis/camper-leaderboard) |  |
 |      |  [ ]()  | [Build a Recipe Box](./data-vis/recipe-box) |  |
 |      |  [ ]()  | [Build the Game of Life](./data-vis/game-of-life) |  |
