@@ -13,3 +13,7 @@ Build an app that is functionally similar to this: https://codepen.io/FreeCodeCa
 **Hint:** You don't need to interpret Markdown yourself - you can import the Marked library for this: https://cdnjs.com/libraries/marked
 
 ## Notes
+
+* Built using VueJS
+* [Live preview](http://glossy-desire.surge.sh/)
+* [Blog Post](https://medium.com/chingu/markdown-previewer-using-vuejs-c4ea88457061)
