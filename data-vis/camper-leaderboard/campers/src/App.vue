@@ -1,7 +1,7 @@
 <template>
   <div id="app">
   <app-header project-title = 'Camper Leaderboard'></app-header>
-  <table-grid :col-titles = 'colTitles'>
+  <table-grid :col-titles = 'colTitles' :col-data = 'colData'>
   </table-grid>
   <app-footer></app-footer>
   </div>
@@ -15,11 +15,20 @@ export default {
   name: 'app',
   data () {
     return {
-       colTitles: ['#', 'camper Name', 'points in past 30 days', 'all time points']
+       colTitles: ['#', 'camper Name', 'points in past 30 days', 'all time points'],
+       colData: []
       }
   },
-  computed: {
-
+  methods: {
+     fetchColData: function() {
+       fetch('https://fcctop100.herokuapp.com/api/fccusers/top/recent')
+            .then(response => response.json())
+            .then(json => this.colData = json)
+            console.log(this.colData);
+            }
+  },
+  created() {
+    this.fetchColData()
   },
   components: {
     'app-header': Header,
