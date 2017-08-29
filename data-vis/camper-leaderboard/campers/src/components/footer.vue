@@ -1,6 +1,6 @@
 <template>
 <footer>
-        &copy; Pankajashree R, 2017
+        By Pankajashree R using VueJS
 </footer>
 </template>
 <style>
@@ -10,7 +10,10 @@ footer {
   width: 100%;
   /* Set the fixed height of the footer here */
   padding: 1%;
-  background-color: #bcd;
+  background-color: green;
+  color: white;
   text-align: center;
+  font-family: Helvetica;
+  margin: 0;
 }
 </style>
