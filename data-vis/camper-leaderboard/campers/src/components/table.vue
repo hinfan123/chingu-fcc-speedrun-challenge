@@ -11,7 +11,7 @@
 <tbody>
 <tr v-for="entry,index in colData">
 <td>{{index + 1}}</td>
-<td>{{entry.username}}</td>
+<td><img :src='entry.img' alt = "avatar" />{{entry.username}}</td>
 <td>{{entry.recent}}</td>
 <td>{{entry.alltime}}</td>
 </tr>
@@ -44,6 +44,7 @@ table {
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
   margin: 1% auto;
   text-align:center;
+  
 }
 
 th{
@@ -51,12 +52,24 @@ th{
     padding: 1%;
 }
 
+th:nth-child(2), td:nth-child(2){
+    text-align: left;
+}
+
 table td{
 		border-bottom:black dotted 1px;
         padding: 1%;
+        vertical-align: middle;
 	}
 
 tbody tr:hover{
 background-color: #ccc;
+    }
+
+    td img{
+        max-width:15%;
+        border: #bbb solid 1.5px;
+        border-radius: 5px;
+        margin-right: 2%;
     }
 </style>
