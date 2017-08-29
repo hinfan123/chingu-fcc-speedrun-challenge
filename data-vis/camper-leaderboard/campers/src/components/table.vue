@@ -9,6 +9,12 @@
 </tr>
 </thead>
 <tbody>
+<tr v-for="entry,index in colData">
+<td>{{index + 1}}</td>
+<td>{{entry.username}}</td>
+<td>{{entry.recent}}</td>
+<td>{{entry.alltime}}</td>
+</tr>
 </tbody>
 </table>
 </template>
@@ -37,18 +43,20 @@ table {
   border-collapse: collapse;
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
   margin: 1% auto;
+  text-align:center;
 }
 
-thead th{
+th{
     background-color: #ddd;
     padding: 1%;
 }
 
-tbody tr:nth-child(odd) {
-  background-color: #bbb;
-}
+table td{
+		border-bottom:black dotted 1px;
+        padding: 1%;
+	}
 
-tbody tr:nth-child(even) {
-  background-color: #abc;
-}
+tbody tr:hover{
+background-color: #ccc;
+    }
 </style>
