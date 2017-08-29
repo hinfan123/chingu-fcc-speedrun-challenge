@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-  <app-header project-title = 'Data Visualization Project 2: Camper Leaderboard'></app-header>
-    <app-footer></app-footer>
+  <app-header project-title = 'Camper Leaderboard'></app-header>
+  <app-footer></app-footer>
   </div>
 </template>
 <script>
@@ -24,6 +24,13 @@ export default {
   }
 }
 </script>
+
+<style>
+*{
+  margin: 0;
+  padding: 0;
+}
+</style>
 
 
 
