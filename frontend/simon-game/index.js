@@ -25,12 +25,17 @@ function gameOn(){
         {
             index = cpattern[x];
             c_disp.style.display = 'block';
-            setTimeout(blink(cell[index]),1000);
-            
+           // setTimeout(blink(cell[index]),1000);
+            userClick();
         }
         
         }
 
+function userClick(){
+    if(document.getElementById('cell1').click){
+        blink(document.getElementById('cell1'));
+    }
+}
 
         
 //blink color
