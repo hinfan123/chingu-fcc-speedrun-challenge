@@ -2,8 +2,7 @@
 <table>
 <thead>
 <tr>
-<th v-for="coltitle in colTitles"
-    @click="sortCol()">
+<th v-for="coltitle in colTitles">
 {{coltitle | capitalize}}
 </th>
 </tr>
