@@ -1,12 +1,23 @@
 <template>
   <div id="app">
   <app-header project-title = 'Camper Leaderboard'></app-header>
+  <vue-tabs type = "pills" 
+            centered 
+            active-tab-color="#9b59b6" 
+            active-text-color="white">
+  <v-tab title="Past 30 Days Leaders">
   <table-grid :col-titles = 'colTitles' :col-data = 'colData'>
   </table-grid>
+  </v-tab>
+  <v-tab title = "All time Leaders">
+  all time
+  </v-tab>
+  </vue-tabs>
   <app-footer></app-footer>
   </div>
 </template>
 <script>
+import {VueTabs, VTab} from 'vue-nav-tabs'
 import Header from './components/header.vue'
 import Footer from './components/footer.vue'
 import Table from './components/table.vue'
@@ -31,6 +42,8 @@ export default {
     this.fetchColData()
   },
   components: {
+    VueTabs,
+    VTab,
     'app-header': Header,
     'app-footer': Footer,
     'table-grid': Table
@@ -38,11 +51,7 @@ export default {
 }
 </script>
 
-<style>
-*{
-  margin: 0;
-  padding: 0;
-}
+<style src = 'vue-nav-tabs/themes/vue-tabs.css'>
 </style>
 
 
