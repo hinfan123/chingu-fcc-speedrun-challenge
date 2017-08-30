@@ -13,8 +13,7 @@ export default {
 
 <style scoped>
 header{
-    background-color: green;
-    color: white;
+    color: green;
     text-align: center;
     margin: 0;
     padding: 1%;
@@ -22,7 +21,7 @@ header{
 }
 a{
   text-decoration: none;
-  color: white;
+  color: purple;
 }
 </style>
 
