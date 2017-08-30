@@ -10,7 +10,7 @@
   </table-grid>
   </v-tab>
   <v-tab title = "All time Leaders">
-  all time
+  <alltime></alltime>
   </v-tab>
   </vue-tabs>
   <app-footer></app-footer>
@@ -21,6 +21,7 @@ import {VueTabs, VTab} from 'vue-nav-tabs'
 import Header from './components/header.vue'
 import Footer from './components/footer.vue'
 import Table from './components/table.vue'
+import allTime from './components/alltime.vue'
 
 export default {
   name: 'app',
@@ -46,7 +47,8 @@ export default {
     VTab,
     'app-header': Header,
     'app-footer': Footer,
-    'table-grid': Table
+    'table-grid': Table,
+    'alltime': allTime
   }
 }
 </script>
