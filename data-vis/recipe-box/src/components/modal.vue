@@ -19,7 +19,7 @@
 
   <md-dialog-actions>
     <md-button class="md-primary" @click="closeDialog('dialog1')">Cancel</md-button>
-    <md-button class="md-primary" @click="closeDialog('dialog1')">Create</md-button>
+    <md-button class="md-primary" @click="addItem('dialog1')">Add Recipe</md-button>
   </md-dialog-actions>
 </md-dialog>
 <!-- end of modal content -->
@@ -53,15 +53,6 @@ export default {
     },
     onClose (type) {
       console.log('Closed', type)
-    },
-    addItem (ref) {
-      let item = {
-        title: this.title,
-        ingredients: this.ing.split(',')
-      }
-      //emit add event to parent
-      this.$emit('add', item)
-      this.closeDialog(ref)
     }
   }
 }
