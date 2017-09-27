@@ -3,7 +3,6 @@
     <md-toolbar>
     <span class='md-title'>Recipes</span>
     </md-toolbar>
-
     <md-list>
     <md-list-item v-for="item,index in recipes" :key="index">
         <span>{{item.title}}</span>
@@ -27,6 +26,8 @@ export default {
   name: 'recipe',
   props: ['recipes'],
   methods: {
+    delItem(index) {
+      this.$emit('del',index)
     }
   }
 }
