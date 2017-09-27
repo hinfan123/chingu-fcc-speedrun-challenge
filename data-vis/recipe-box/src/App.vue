@@ -42,6 +42,13 @@ export default {
       ]
     }
   },
+  methods: {
+    addItem (item) {
+      this.recipes.push({
+        title: item.title,
+        ingredients: item.ingredients
+      })
+    },
   }
 }
 </script>
