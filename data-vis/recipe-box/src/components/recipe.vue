@@ -5,7 +5,7 @@
     </md-toolbar>
 
     <md-list>
-    <md-list-item v-for="item in recipes" :key="item.id">
+    <md-list-item v-for="item,index in recipes" :key="index">
         <span>{{item.title}}</span>
         <md-list-expand>
           <md-list-item>
