@@ -12,7 +12,7 @@
       </md-input-container>
       <md-input-container>
     <label>Ingredients separated by commas</label>
-    <md-textarea placeholder = 'item1, item2...'></md-textarea>
+    <md-textarea placeholder = 'item1, item2...' v-model='ing'></md-textarea>
   </md-input-container>
     </form>
   </md-dialog-content>
