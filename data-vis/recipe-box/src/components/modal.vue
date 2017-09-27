@@ -35,6 +35,12 @@
 <script>
 export default {
   name: 'modal',
+  data() {
+    return {
+      title: ' ',
+      ing: ' '
+    }
+  },
   methods: {
     openDialog (ref) {
       this.$refs[ref].open()
