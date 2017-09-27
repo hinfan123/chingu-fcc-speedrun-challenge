@@ -49,6 +49,10 @@ export default {
         ingredients: item.ingredients
       })
     },
+    delItem (index) {
+      console.log(index)
+      this.recipes.splice(index,1)
+    }
   }
 }
 </script>
