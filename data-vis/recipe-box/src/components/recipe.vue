@@ -25,26 +25,8 @@
 <script>
 export default {
   name: 'recipe',
-  data: function () {
-    return {
-      recipes: [
-        {
-          id: 1,
-          title: 'Pumpkin Pie',
-          ingredients: [
-            'Pumpkin Puree',
-            'Sweetened Condensed Milk',
-            'Eggs',
-            'Pumpkin Pie Spice',
-            'Pie Crust'
-          ]
-        },
-        {
-          id: 2,
-          title: 'Spaghetti',
-          ingredients: ['Noodles', 'Tomato Sauce', '(Optional) Meatballs']},
-        {title: 'Onion Pie', ingredients: ['Onion', 'Pie Crust', 'Sounds Yummy right?']}
-      ]
+  props: ['recipes'],
+  methods: {
     }
   }
 }
