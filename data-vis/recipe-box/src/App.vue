@@ -2,9 +2,11 @@
 <div id = 'app'>
 <md-toolbar class="md-medium md-accent">
   <h1 class="md-title" style="flex: 1"><b>FCC Data Visualization Project 3: Recipe box</b></h1>
-  <modal></modal>
+  <modal v-on:add="addItem"></modal>
 </md-toolbar>
-<recipes></recipes>
+<md-layout md-align="center">
+<recipes :recipes='recipes' v-on:del="delItem"></recipes>
+</md-layout>
 </div>
 </template>
 
