@@ -8,7 +8,7 @@
     <form>
       <md-input-container>
         <label>Recipe name</label>
-        <md-textarea></md-textarea>
+        <md-textarea v-model='title'></md-textarea>
       </md-input-container>
       <md-input-container>
     <label>Ingredients separated by commas</label>
