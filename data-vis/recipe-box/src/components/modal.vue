@@ -53,6 +53,15 @@ export default {
     },
     onClose (type) {
       console.log('Closed', type)
+    },
+    addItem (ref) {
+      let item = {
+        title: this.title,
+        ingredients: this.ing.split(',')
+      }
+      //emit add event to parent
+      this.$emit('add', item)
+      this.closeDialog(ref)
     }
   }
 }
