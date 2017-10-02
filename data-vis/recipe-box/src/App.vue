@@ -5,7 +5,7 @@
   <modal v-on:add="addItem"></modal>
 </md-toolbar>
 <md-layout md-align="center">
-<recipes :recipes='recipes' v-on:del="delItem"></recipes>
+<recipes :recipes='recipes' v-on:del="delItem" v-on:editIt="editItem"></recipes>
 </md-layout>
 </div>
 </template>
@@ -54,6 +54,12 @@ export default {
     delItem (index) {
       console.log(index)
       this.recipes.splice(index,1)
+    },
+    editItem (recipe) {
+      let index = recipe.id;
+      let title = recipe.title;
+      let ingredients = recipe.ingredients
+      console.log(title,ingredients)
     }
   }
 }
