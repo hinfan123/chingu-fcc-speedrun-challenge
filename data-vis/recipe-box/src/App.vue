@@ -14,15 +14,7 @@
 import modal from './components/modal.vue'
 import recipes from './components/recipe.vue'
 
-export default {
-  name: 'app',
-  components: {
-    modal,
-    recipes
-  },
-    data: function () {
-    return {
-      recipes: [
+var recipes_data = [
         {
           title: 'Pumpkin Pie',
           ingredients: [
@@ -42,6 +34,25 @@ export default {
           ingredients: ['Onion', 'Pie Crust', 'Sounds Yummy right?']
           }
       ]
+var localrecipes
+
+if(localStorage.getItem('recipes') && localStorage.getItem('recipes').length != 0){
+     localrecipes = JSON.parse(localStorage.getItem('recipes'))
+    }
+else{
+  localStorage.setItem('recipes',JSON.stringify(recipes_data))
+  localrecipes = recipes_data.splice(0)
+  }
+
+export default {
+  name: 'app',
+  components: {
+    modal,
+    recipes
+  },
+    data: function () {
+    return {
+      recipes: localrecipes
     }
   },
   methods: {
@@ -50,10 +61,12 @@ export default {
         title: item.title,
         ingredients: item.ingredients
       })
+      localStorage.setItem('recipes',JSON.stringify(this.recipes))
     },
     delItem (index) {
       console.log(index)
       this.recipes.splice(index,1)
+      localStorage.setItem('recipes',JSON.stringify(this.recipes))
     },
     editItem (recipe) {
       //Using object destructuring assignment
@@ -62,6 +75,7 @@ export default {
       //let ingredients = recipe.ingredients 
       this.recipes[id].title = title
       this.recipes[id].ingredients = ingredients
+      localStorage.setItem('recipes',JSON.stringify(this.recipes))
     }
   }
 }
