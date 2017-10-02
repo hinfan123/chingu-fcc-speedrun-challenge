@@ -68,6 +68,8 @@ export default {
       this.$emit('edit', item)
       //console.log(item)
       this.closeDialog(ref)
+      title = this.item.title
+      ing =this.item.ingredients.join(',')
     }
   }
 }
