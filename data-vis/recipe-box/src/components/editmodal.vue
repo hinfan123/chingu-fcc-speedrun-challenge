@@ -60,13 +60,13 @@ export default {
     },
     editItem (ref) {
       let item = {
+        id: this.index,
         title: this.title,
         ingredients: this.ing.split(',')
       }
-      //emit add event to parent
+      //emit edit event to parent - recipe
       this.$emit('edit', item)
-      this.title = ''
-      this.ing = ''
+      //console.log(item)
       this.closeDialog(ref)
     }
   }
