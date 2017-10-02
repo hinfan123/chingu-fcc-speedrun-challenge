@@ -56,10 +56,12 @@ export default {
       this.recipes.splice(index,1)
     },
     editItem (recipe) {
-      let index = recipe.id;
-      let title = recipe.title;
-      let ingredients = recipe.ingredients
-      console.log(title,ingredients)
+      //Using object destructuring assignment
+      const {id, title, ingredients} = recipe
+      //let title = recipe.title
+      //let ingredients = recipe.ingredients 
+      this.recipes[id].title = title
+      this.recipes[id].ingredients = ingredients
     }
   }
 }
