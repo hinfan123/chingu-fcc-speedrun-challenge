@@ -9,8 +9,8 @@
         <md-list-expand>
           <md-list-item>
             <span class="md-subheading"><b>Ingredients:</b></span>
-            <md-button>Edit<md-icon>edit</md-icon></md-button>
-            <md-button @click="delItem(index)">Delete<md-icon>delete</md-icon></md-button>
+            <editmodal :item="item" :edit="editItem(index, item)"></editmodal>
+            <md-button class = "md-accent" @click="delItem(index)">Delete<md-icon class = "md-accent">delete</md-icon></md-button>
           </md-list-item>
         <md-list v-for="item_ing in item.ingredients" :key="item_ing">
             <md-list-item class="md-inset">{{item_ing}}</md-list-item>
@@ -22,13 +22,25 @@
 </template>
 
 <script>
+import editmodal from './editmodal.vue'
 export default {
   name: 'recipe',
   props: ['recipes'],
   methods: {
-    delItem(index) {
+    delItem (index) {
       this.$emit('del',index)
+    },
+    editItem (index, item) {
+      let recipe = {
+        id: index,
+        title: item.title,
+        ingredients: item.ingredients
+      }
+      this.$emit('editIt', recipe)
     }
+  },
+  components: {
+    editmodal
   }
 }
 </script>
