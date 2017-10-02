@@ -5,11 +5,11 @@
     </md-toolbar>
     <md-list>
     <md-list-item v-for="item,index in recipes" :key="index">
-        <span>{{item.title}}</span>
+        <span>{{index + 1}}. {{item.title}}</span>
         <md-list-expand>
           <md-list-item>
             <span class="md-subheading"><b>Ingredients:</b></span>
-            <editmodal :item="item" :edit="editItem(index, item)"></editmodal>
+            <editmodal :item="item" :index="index" v-on:edit="editItem"></editmodal>
             <md-button class = "md-accent" @click="delItem(index)">Delete<md-icon class = "md-accent">delete</md-icon></md-button>
           </md-list-item>
         <md-list v-for="item_ing in item.ingredients" :key="item_ing">
@@ -30,12 +30,13 @@ export default {
     delItem (index) {
       this.$emit('del',index)
     },
-    editItem (index, item) {
+    editItem (item) {
       let recipe = {
-        id: index,
+        id: item.id,
         title: item.title,
         ingredients: item.ingredients
       }
+//console.log(recipe)
       this.$emit('editIt', recipe)
     }
   },
