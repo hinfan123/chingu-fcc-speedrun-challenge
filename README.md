@@ -73,8 +73,8 @@ Copy this table as needed to make a separate table for each team member for reco
 |   25.03.2017   |  [Medium Post](https://medium.com/@pankajashree/chingu-fcc-speedrun-project-8-tic-tac-toe-app-5f47b5c39cb8#.8xtclywu6)  | [Build a Tic Tac Toe Game](./frontend/tictactoe-game) |  |
 |      |  [ ]()  | [Build a Simon Game](./frontend/simon-game) |  |
 |   22.07.2017   |  [Medium Post](https://medium.com/chingu/markdown-previewer-using-vuejs-c4ea88457061)  | [Build a Markdown Previewer](./data-vis/markdown-previewer) |  |
-|      |  [ ]()  | [Build a Camper Leaderboard](./data-vis/camper-leaderboard) |  |
-|      |  [ ]()  | [Build a Recipe Box](./data-vis/recipe-box) |  |
+|   30.08.2017   |  [Medium Post](https://medium.com/chingu/fcc-camper-leaderboard-using-vuejs-3b5e20433d89)  | [Build a Camper Leaderboard](./data-vis/camper-leaderboard) |  |
+|   03.10.2017   |  [Medium Post](https://medium.com/chingu/recipe-box-using-vuejs-229e0aaa7818)  | [Build a Recipe Box](./data-vis/recipe-box) |  |
 |      |  [ ]()  | [Build the Game of Life](./data-vis/game-of-life) |  |
 |      |  [ ]()  | [Build a Roguelike Dungeon Crawler](./data-vis/dungeon-crawler) |  |
 |      |  [ ]()  | [Visualize Data with a Bar Chart](./data-vis/bar-chart) |  |
