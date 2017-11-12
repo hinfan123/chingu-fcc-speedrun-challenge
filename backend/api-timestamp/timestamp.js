@@ -13,7 +13,7 @@ module.exports.convert = (timestamp) => {
   }
   else {
     return {
-      "unix": Date.parse(timestamp) / 1000, //convert unix timestamp to string
+      "unix": Date.parse(timestamp) / 1000, //convert to unix timestamp from string
       "natural": timestamp
     }
   }
