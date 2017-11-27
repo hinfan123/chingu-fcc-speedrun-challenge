@@ -13,3 +13,8 @@ Build a full stack app that is functionally similar to this: https://little-url.
 * User Story: When I visit that shortened URL, it will redirect me to my original link.
 
 ## Notes
+
+[Demo Link](https://pankaja-fcc-tinyurl.glitch.me/)
+
+* [Tutorial 1](http://lefkowitz.me/thoughts/2016/05/05/men-stack-building-a-url-shortener-with-mongodb-express-and-node-js/)
+* [Turtorial 2](https://coligo.io/create-url-shortener-with-node-express-mongo/)
