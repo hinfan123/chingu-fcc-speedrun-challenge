@@ -45,7 +45,7 @@ function draw(jsondata) {
       let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
       let formatCurrency = d3.format("$,.2f");
-      
+
       let tip = d3.tip()
       .attr('class', 'd3-tip')
       .offset([-10, 0])
@@ -92,7 +92,6 @@ function draw(jsondata) {
      .data(jsondata.data)
    .enter().append("rect")
      .attr("class", "bar")
-     .style("fill","green")
      .attr("x", function(d) { return x(new Date(d[0])); })
      .attr("y", function(d) { return y(d[1]); })
      .attr("height", function(d) { return height - y(d[1]); })
