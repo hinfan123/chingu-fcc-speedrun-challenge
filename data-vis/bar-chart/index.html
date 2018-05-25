@@ -6,6 +6,11 @@
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
     <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     <style>
+      .container {
+        margin: 0 auto;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
     .axis path,
 .axis line {
   fill: none;
@@ -52,7 +57,11 @@
 </style>
   </head>
   <body>
+    <div class="container">
+    <h1>Gross Domestic Product</h1>
     <svg class="chart"></svg>
+    <div class="notes"></div>
+  </div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -8,13 +8,16 @@ function getData(url) {
      })
      .then( data => {
          // console.log(data)
-         draw(data)
+         d3.select(".notes")
+      .append("text")
+      .text(data.description);
+         draw(data);
      })
 }
 
 function draw(jsondata) {
-    let margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 960 - margin.left - margin.right,
+    let margin = {top: 20, right: 20, bottom: 30, left: 70},
+    width = 1000 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
     let mindate = new Date(jsondata.data[0][0]),
