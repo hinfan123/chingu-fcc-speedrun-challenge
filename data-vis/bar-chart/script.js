@@ -31,23 +31,41 @@ function draw(jsondata) {
             return d[1];
           })]);
     
-           
-    let svg = d3.select(".chart")
+
+  let xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom")
+      .ticks(d3.time.years, 5);
+
+  let yAxis = d3.svg.axis()
+      .scale(y)
+      .orient("left")
+      .ticks(10, "");
+
+      let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+      let formatCurrency = d3.format("$,.2f");
+      
+      let tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d) {
+        let currentDateTime = new Date(d[0]);
+        let year = currentDateTime.getFullYear();
+        let month = months[currentDateTime.getMonth()];
+        let dollars = d[1];
+        return formatCurrency(dollars) + " Billion; Date: <span style='color:red'>" + month + ", " + year + "</span>";
+      })
+
+      let svg = d3.select(".chart")
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
             .append("g")
                 .attr("transform", 
                     "translate(" + margin.left + "," + margin.top + ")")
 
-  var xAxis = d3.svg.axis()
-      .scale(x)
-      .orient("bottom")
-      .ticks(d3.time.years, 5);
+      svg.call(tip);
 
-  var yAxis = d3.svg.axis()
-      .scale(y)
-      .orient("left")
-      .ticks(10, "");
 
   // add the x and y Axis
   svg.append("g")
@@ -57,7 +75,7 @@ function draw(jsondata) {
       .append("text")
       .attr("transform", "translate(" + width + ")")
       .style("text-anchor", "end")
-        .text("Year");;
+        .text("Year");
 
   svg.append("g")
   .attr("class", "y axis")
@@ -78,5 +96,8 @@ function draw(jsondata) {
      .attr("x", function(d) { return x(new Date(d[0])); })
      .attr("y", function(d) { return y(d[1]); })
      .attr("height", function(d) { return height - y(d[1]); })
-     .attr("width", 10);
+     .attr("width", 10)
+     .on('mouseover', tip.show)
+      .on('mouseout', tip.hide);
+
 }
