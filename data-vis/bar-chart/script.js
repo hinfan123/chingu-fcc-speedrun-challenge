@@ -57,7 +57,7 @@ function draw(jsondata) {
         let year = currentDateTime.getFullYear();
         let month = months[currentDateTime.getMonth()];
         let dollars = d[1];
-        return formatCurrency(dollars) + " Billion; Date: <span style='color:red'>" + month + ", " + year + "</span>";
+        return formatCurrency(dollars) + " Billion, <span style='color:red'>" + month + ", " + year + "</span>";
       })
 
       let svg = d3.select(".chart")
