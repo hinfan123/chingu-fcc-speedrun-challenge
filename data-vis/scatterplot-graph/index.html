@@ -23,13 +23,17 @@
   stroke-width: 1px;
 }
 
-.d3-tip {
+.tooltip {
   line-height: 1;
   font-weight: bold;
-  padding: 12px;
+  padding: 5px;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
   border-radius: 2px;
+  margin: 0 auto;
+  position: absolute;
+  pointer-events: pointer;
+  width: 150px;
 }
 
 /* Creates a small triangle extender for the tooltip */
@@ -45,12 +49,6 @@
   text-align: center;
 }
 
-/* Style northward tooltips differently */
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0;
-}
 </style>
   </head>
   <body>
