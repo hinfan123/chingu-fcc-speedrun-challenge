@@ -7,18 +7,32 @@ function getData(url) {
         return response.json()
      })
      .then( data => {
-         console.log(data)
-         d3.select(".notes")
-      .append("text")
-      .text(data.description);
+         let fastestTime = 2210;
+
+         //Prep the data for D3 
+data.forEach(function(finish) {
+    //turn finishing time into seconds behind winner
+    finish.behind = finish.Seconds - fastestTime;
+  
+    //add data legend
+    if (finish.Doping != "") {
+      finish.legend = "Doping Allegations";
+    } else {
+      finish.legend = "No Doping Allegation";
+    }
+  
+    //console.log(finish.legend);
+  });
+  console.log(data);
+
          draw(data);
-     })
+     });
 }
 
 function draw(jsondata) {
-    let margin = {top: 20, right: 20, bottom: 30, left: 70},
+    let margin = {top: 20, right: 20, bottom: 30, left: 20},
     width = 960 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom;
 
     var formatCount = d3.format(",.0f"),
   formatTime = d3.time.format("%H:%M"),
@@ -28,10 +42,17 @@ function draw(jsondata) {
     return formatTime(t);
   };
 
+  // tooltip area
+
+  var tooltip = d3.select("body").append("div")
+  .attr("class", "tooltip")
+  .style("opacity", 0);
+
+
 // axes
     let x = d3.scale.linear()
           .range([0, width])
-          .domain([[60 * 3.5, 0]]);
+          .domain([60 * 3.5, 0]);
           
           let xAxis = d3.svg.axis()
           .scale(x)
@@ -40,7 +61,7 @@ function draw(jsondata) {
           .tickFormat(formatMinutes);
 
           let y = d3.scale.linear()
-          .range([height, 0])
+          .range([0, height])
           .domain([1, 36]);
 
   let yAxis = d3.svg.axis()
@@ -50,7 +71,6 @@ function draw(jsondata) {
 
       let tip = d3.tip()
       .attr('class', 'd3-tip')
-      .offset([-10, 0])
       .html(function(d) {
         return d.Name + ": " + d.Nationality + "<br/>Year: " + d.Year + ", Time: " + d.Time + "<br/><br/>" + d.Doping;
       })
@@ -87,5 +107,56 @@ function draw(jsondata) {
   .attr("dy", "0.8em")
   .style("text-anchor", "end")
   .text("Ranking");
+
+  var ascents = svg.selectAll("circle")
+  .data(jsondata)
+  .enter()
+  .append("circle")
+  .attr("cx", function(d) {
+    return x(d.behind);
+  })
+  .attr("cy", function(d) {
+    return y(d.Place);
+  })
+  .attr("r", 5)
+  .attr("fill", function(d) {
+    if (d.Doping == "") {
+      return "#999";
+    }
+    return "#f44";
+  })
+  .attr("data-legend", function(d) {
+    return d.legend;
+  })
+  .on("mouseover", function(d) {
+    tooltip.transition()
+      .duration(200)
+      .style("opacity", .9);
+
+      tooltip.html(createToolTip(d))
+      .style("left", ( width/2) + "px")
+      .style("top", (280) + "px");
+  })
+  .on("mouseout", function(d) {
+    tooltip.transition()
+      .duration(500)
+      .style("opacity", 0);
+  });
+
+  //text labels
+svg.selectAll("text")
+.data(alps)
+.enter()
+.append("text")
+.text(function(d) {
+  return d.Name;
+})
+.attr("x", function(d) {
+  return xScale(d.behind);
+})
+.attr("y", function(d) {
+  return yScale(d.Place);
+})
+.attr("transform", "translate(15,+4)");
 
 }
