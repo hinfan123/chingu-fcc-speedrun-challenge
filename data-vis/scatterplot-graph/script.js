@@ -145,18 +145,33 @@ function draw(jsondata) {
 
   //text labels
 svg.selectAll("text")
-.data(alps)
+.data(jsondata)
 .enter()
 .append("text")
 .text(function(d) {
   return d.Name;
 })
 .attr("x", function(d) {
-  return xScale(d.behind);
+  return x(d.behind);
 })
 .attr("y", function(d) {
-  return yScale(d.Place);
+  return y(d.Place);
 })
-.attr("transform", "translate(15,+4)");
+.attr("transform", "translate(15,8)");
 
+}
+
+function friendlySeconds(seconds) {
+  return parseInt(seconds / 60) + ":" + seconds % 60;
+}
+
+function createToolTip(d) {
+  var tooltipHTML = "<span class = 'name'>" + d.Name + ": " + d.Nationality + "</span>";
+  tooltipHTML += "<br/>Year: " + d.Year + ", Time: " + friendlySeconds(d.Seconds) + "<br/>";
+  if (d.doping !== "") {
+    tooltipHTML += "<br/>" + d.Doping;
+  } else {
+    tooltipHTML += "<br/>No Doping Allegation";
+  }
+  return tooltipHTML;
 }
