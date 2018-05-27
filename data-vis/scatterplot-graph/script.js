@@ -43,7 +43,6 @@ function draw(jsondata) {
   };
 
   // tooltip area
-
   var tooltip = d3.select("body").append("div")
   .attr("class", "tooltip")
   .style("opacity", 0);
@@ -159,7 +158,52 @@ svg.selectAll("text")
 })
 .attr("transform", "translate(15,8)");
 
-}
+
+//legend 
+//circles with fill
+//gray circle
+svg.append("circle")
+  .attr("cx", function(d) {
+    return x(65);
+  })
+  .attr("cy", function(d) {
+    return y(20);
+  })
+  .attr("r", 5)
+  .attr("fill", "#333");
+   
+svg.append("text")
+  .attr("x", function(d) {
+    return x(60);
+  })
+  .attr("y", function(d) {
+    return y(20)+4;
+  })
+  .attr("text-anchor", "left")
+  .attr("class", "legend")
+  .text("No doping allegations");
+
+//red circle 
+svg.append("circle")
+  .attr("cx", function(d) {
+    return x(65);
+  })
+  .attr("cy", function(d) {
+    return y(23);
+  })
+  .attr("r", 5)
+  .attr("fill", "#f44");
+ 
+svg.append("text")
+  .attr("x", function(d) {
+    return x(60);
+  })
+  .attr("y", function(d) {
+    return y(23)+4;
+  })
+  .attr("text-anchor", "left")
+  .attr("class", "legend")
+  .text("Riders with doping allegations");
 
 function friendlySeconds(seconds) {
   return parseInt(seconds / 60) + ":" + seconds % 60;
@@ -174,4 +218,5 @@ function createToolTip(d) {
     tooltipHTML += "<br/>No Doping Allegation";
   }
   return tooltipHTML;
+}
 }
