@@ -14,4 +14,4 @@ Build a full stack app that is functionally similar to this: https://timestamp-m
 
 ## Notes
 
-* App is live (https://pankaja-fcc-timestamp.glitch.me/)[here].
+* App is live [https://pankaja-fcc-timestamp.glitch.me/](here).
