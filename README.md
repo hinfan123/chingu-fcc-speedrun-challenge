@@ -82,9 +82,9 @@ Copy this table as needed to make a separate table for each team member for reco
 |      |  [ ]()  | [Visualize Data with a Heat Map](./data-vis/heat-map) |  |
 |      |  [ ]()  | [Show National Contiguity with a Force Directed Graph](./data-vis/force-directed-graph) |  |
 |      |  [ ]()  | [Map Data Across the Globe](./data-vis/data-across-globe) |  |
-|      |  [ ]()  | [Timestamp Microservice](./backend/api-timestamp) |  |
-|      |  [ ]()  | [Request Header Parser Microservice](./backend/api-request-header) |  |
-|      |  [ ]()  | [URL Shortener Microservice](./backend/api-url-shortener) |  |
+|  12.10.2017    |  [Medium Post](https://medium.com/chingu/fcc-backend-projects-1-and-2-66e701759750)  | [Timestamp Microservice](./backend/api-timestamp) |  |
+|  12.10.2017    |  [Medium Post](https://medium.com/chingu/fcc-backend-projects-1-and-2-66e701759750)  | [Request Header Parser Microservice](./backend/api-request-header) |  |
+|  27.10.2017    |  [Medium Post](https://medium.com/chingu/url-shortener-microservice-4f7743fd1d56)  | [URL Shortener Microservice](./backend/api-url-shortener) |  |
 |      |  [ ]()  | [Image Search Abstraction Layer](./backend/api-image-search) |  |
 |      |  [ ]()  | [File Metadata Microservice](./backend/api-file-metadata) |  |
 |      |  [ ]()  | [Build a Voting App](./backend/app-voting) |  |
